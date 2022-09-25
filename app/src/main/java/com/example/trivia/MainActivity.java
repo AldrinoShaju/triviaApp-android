@@ -31,15 +31,24 @@ public class MainActivity extends AppCompatActivity {
 
 
         binding.buttonOpt1.setOnClickListener(view -> {
-            score++;
+            updateScore(true);
             nextQuestion();
         });
 
-        binding.buttonOpt2.setOnClickListener(view-> nextQuestion());
+        binding.buttonOpt2.setOnClickListener(view-> {
+            updateScore(false);
+            nextQuestion();
+        });
 
-        binding.buttonOpt3.setOnClickListener(view-> nextQuestion());
+        binding.buttonOpt3.setOnClickListener(view-> {
+            updateScore(false);
+            nextQuestion();
+        });
 
-        binding.buttonOpt4.setOnClickListener(view-> nextQuestion());
+        binding.buttonOpt4.setOnClickListener(view-> {
+            updateScore(false);
+            nextQuestion();
+        });
 
 
 
@@ -68,5 +77,16 @@ public class MainActivity extends AppCompatActivity {
         binding.buttonOpt2.setText(incorrectAnswers.get(0));
         binding.buttonOpt3.setText(incorrectAnswers.get(1));
         binding.buttonOpt4.setText(incorrectAnswers.get(2));
+    }
+
+    private void updateScore(boolean isCorrect){
+        if(isCorrect){
+            binding.scoreCurTextView.setText(String.format("Score: %d/20", ++score));
+        }else{
+            if(--score<=0){
+                score = 0;
+            }
+            binding.scoreCurTextView.setText(String.format("Score: %d/20", score));
+        }
     }
 }

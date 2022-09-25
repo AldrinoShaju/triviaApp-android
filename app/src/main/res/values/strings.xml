@@ -5,11 +5,13 @@
     <string name="dummy_text">Dummy Option Text</string>
     <string name="questionNumberString">Question: %d/20</string>
     <string name="scoreText">score</string>
-    <string name="outOf20Text">\" / 20\"</string>
+    <string name="outOf20Text">/20</string>
     <string name="appNameText">Trivia App</string>
     <string name="startQuizBtnText">Start</string>
     <string name="placeholderTextView">PlaceHolder - Hello Word, add question here</string>
     <string name="scoreResultText">SCORE</string>
     <string name="resultDummyText">Dummy Score</string>
     <string name="restartQuizBtnText">Restart Quiz</string>
+    <string name="dummy_score">Score: 0/20</string>
+    <string name="dummy_high_score">Highest Score: 14/20</string>
 </resources>
